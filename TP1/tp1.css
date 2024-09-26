@@ -1,0 +1,41 @@
+.sio{
+    color: rgb(0, 247, 255);
+    background-color: #293745;
+    padding: 6px;
+    border-radius: 12px;
+    border-style: outset;
+    border-color:  rgb(0, 247, 255);
+    font-size: 30px;
+}
+
+.slam{
+    color: rgb(0, 247, 255);
+    background-color: #293745;
+    padding: 6px;
+    border-radius: 12px;
+    border-style: outset;
+    border-color:  rgb(0, 247, 255);
+    font-size: 30px;
+}
+
+.sisr{
+    color: rgb(0, 247, 255);
+    background-color: #293745;
+    padding: 6px;
+    border-radius: 12px;
+    border-style: outset;
+    border-color:  rgb(0, 247, 255);
+    font-size: 30px;
+}
+
+.sio:hover{
+    background-color: rgb(4, 136, 141);
+}
+
+.slam:hover{
+    background-color: rgb(4, 136, 141);
+}
+
+.sisr:hover{
+    background-color: rgb(4, 136, 141);
+}
