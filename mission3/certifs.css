@@ -1,0 +1,14 @@
+.certifs{
+    color: deeppink;
+    background-color: #315a80;
+    padding: 6px;
+    border-radius: 12px;
+    border-style: outset;
+    border-color: deeppink;
+    font-family: 'Cascadia Mono', 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+
+.certifs:hover{
+    background-color: rgb(163, 1, 87);
+}

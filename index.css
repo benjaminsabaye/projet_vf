@@ -82,8 +82,22 @@ a{
     border-radius: 12px;
     border-style: outset;
     border-color: rgb(0, 255, 213);
+    margin-right: 45px;
 }
 
 .tp3:hover {
-    background-color: rgb(2, 184, 153);
+    background-color: rgb(81, 2, 184);
+}
+
+.mission3 {
+    color: rgb(0, 191, 255);
+    background-color: #315a80;
+    padding: 6px;
+    border-radius: 12px;
+    border-style: outset;
+    border-color: rgb(0, 191, 255);
+}
+
+.mission3:hover {
+    background-color: #16293b;
 }
