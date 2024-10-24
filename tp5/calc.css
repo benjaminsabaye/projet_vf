@@ -102,3 +102,11 @@ div {
         max-width: 100%;
     }
 }
+
+.retour {
+    background-color: #c0392b;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+}
