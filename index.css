@@ -19,10 +19,11 @@
 }
 
 body {
-    background-image: url('./images/1276368.jpg');
+    /*background-image: url('./images/1276368.jpg');
     background-size: 137%;
     background-position: fixed;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
+    background-color: #7e54d2;
 }
 
 a{
@@ -32,19 +33,20 @@ a{
 
 .all_elements{
     margin-top: 5%;
+    max-width: 1400px;
 }
 
 .main_title{
     font-family: 'Giraffey';
     font-size: 180px;
     text-transform: uppercase;
-    color: white;
+    color: rgb(0, 0, 0);
     letter-spacing: 11px;
 }
 
 .subtitles a{
     transition: transform 0.4s ease;
-    justify-content: center; /* Centre horizontalement */
+    justify-content: center;
     align-items: center;
 }
 
@@ -57,7 +59,7 @@ a{
     text-decoration: none;
     border-bottom: 2px solid ;
     margin-right: 45px;
-    color: purple;
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     font-family: 'OstrichSans-Medium';
     font-size: 40px;
@@ -77,7 +79,7 @@ a{
 }
 
 .mission1{
-    color: deeppink;
+    color: rgb(0, 0, 0);
     border-bottom: 2px solid ;
     margin-right: 45px;
     text-transform: uppercase;
@@ -90,12 +92,12 @@ a{
 }
 
 .mission1:hover{
-    background-color: rgb(163, 1, 87);
+    background-color: rgb(23, 0, 23);
     color: white;
 }
 
 .tp2{
-    color: rgb(170, 255, 0);
+    color: rgb(0, 0, 0);
     border-bottom: 2px solid ;
     margin-right: 45px;
     text-transform: uppercase;
@@ -108,12 +110,12 @@ a{
 }
 
 .tp2:hover{
-    background-color: rgb(94, 141, 0);
+    background-color: rgb(23, 0, 23);
     color: white;
 }
 
 .mission2{
-    color: orange;
+    color: rgb(0, 0, 0);
     border-bottom: 2px solid ;
     margin-right: 45px;
     text-transform: uppercase;
@@ -126,12 +128,12 @@ a{
 }
 
 .mission2:hover{
-    background-color: rgb(161, 105, 2);
+    background-color: rgb(23, 0, 23);
     color: white;
 }
 
 .tp3 {
-    color: rgb(0, 255, 213);
+    color: rgb(0, 0, 0);
     border-bottom: 2px solid ;
     margin-right: 45px;
     text-transform: uppercase;
@@ -144,12 +146,12 @@ a{
 }
 
 .tp3:hover {
-    background-color: rgb(0, 150, 125);
+    background-color: rgb(23, 0, 23);
     color: white;
 }
 
 .mission3 {
-    color: rgb(0, 191, 255);
+    color: rgb(0, 0, 0);
     border-bottom: 2px solid ;
     text-transform: uppercase;
     font-family: 'OstrichSans-Medium';
@@ -158,9 +160,10 @@ a{
     transition: transform 0.4s ease;
     cursor: pointer;
     padding: 5px;
+    margin-right: 45px;
 }
 
 .mission3:hover {
-    background-color: #16293b;
+    background-color: rgb(23, 0, 23);
     color: white;
 }

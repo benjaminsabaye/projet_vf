@@ -1,41 +1,68 @@
+@font-face {
+    font-family: 'Giraffrey';
+    src: url('../fonts/Giraffey.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'OstrichSans-Medium';
+    src: url('../fonts/OstrichSans-Medium.otf') format('opentype');
+}
+
+.main_title{
+    font-family: 'Giraffrey';
+    font-size: 120px;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin-left: 40px;
+}
+
 .sio{
-    color: rgb(0, 247, 255);
-    background-color: #293745;
+    color: rgb(0, 0, 0);
+    background-color: #2937457f;
     padding: 6px;
     border-radius: 12px;
     border-style: outset;
-    border-color:  rgb(0, 247, 255);
+    border-color:  #9a68ff;
     font-size: 30px;
+    font-family: 'OstrichSans-Medium';
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 .slam{
-    color: rgb(0, 247, 255);
-    background-color: #293745;
+    color: rgb(0, 0, 0);
+    background-color: #2937457f;
     padding: 6px;
     border-radius: 12px;
     border-style: outset;
-    border-color:  rgb(0, 247, 255);
+    border-color:  #9a68ff;
     font-size: 30px;
+    font-family: 'OstrichSans-Medium';
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 .sisr{
-    color: rgb(0, 247, 255);
-    background-color: #293745;
+    color: rgb(0, 0, 0);
+    background-color: #2937457f;
     padding: 6px;
     border-radius: 12px;
     border-style: outset;
-    border-color:  rgb(0, 247, 255);
+    border-color:  #9a68ff;
     font-size: 30px;
+    font-family: 'OstrichSans-Medium';
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 .sio:hover{
-    background-color: rgb(4, 136, 141);
+    background-color: #8062bb;
 }
 
 .slam:hover{
-    background-color: rgb(4, 136, 141);
+    background-color: #8062bb;
 }
 
 .sisr:hover{
-    background-color: rgb(4, 136, 141);
+    background-color: #8062bb;
 }
