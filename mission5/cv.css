@@ -78,3 +78,12 @@ body {
     margin-left: 400px;
 }
 
+a {
+    text-decoration: none;
+    background-color: rgb(209, 1, 1);
+    color: white;
+    font-size: 40px;
+    border-radius: 17px;
+    border: 3px black solid;
+    padding: 5px;
+}
