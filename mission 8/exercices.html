@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>15 Exercices JavaScript Interactifs</title>
+</head>
+<body>
+
+<video id="background-video" autoplay muted loop>
+    <source src="B.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la balise vidéo.
+</video>
+
+<div class="content">
+    <h1>10 Exercices JavaScript Interactifs</h1>
+    <table>
+        <tr>
+            <th>Exercice</th>
+            <th>Actions</th>
+        </tr>
+
+        <!-- Exercice 1 -->
+        <tr>
+            <td>1. Générer une citation aléatoire</td>
+            <td>
+                <button onclick="genererCitation()">Générer</button>
+                <button onclick="afficherCode('code1')">Afficher le code</button>
+                <p id="citation"></p>
+                <div id="code1" class="code-box" style="display: none;">
+        <pre>
+        function genererCitation() {
+            const citations = [
+                "La vie est un mystère qu'il faut vivre, et non un problème à résoudre. - Gandhi",
+                "Le succès, c'est se promener d'échec en échec tout en restant motivé. - Churchill",
+                "Le bonheur dépend de nous seuls. - Aristote",
+                "Je vois mon âme qui chavire en bord de mer. - Ademo",
+                "L'imagination est plus importante que le savoir. - Einstein",
+                "Fais de ta vie un rêve, et d'un rêve, une réalité. - Saint-Exupéry"
+            ];
+            
+            const index = Math.floor(Math.random() * citations.length);
+            document.getElementById("citation").textContent = citations[index];
+        }
+        
+        function afficherCode(id) {
+            let codeBox = document.getElementById(id);
+            codeBox.style.display = (codeBox.style.display === "none") ? "block" : "none";
+        }
+        </pre>
+                </div>
+            </td>
+        </tr>
+        
+
+        <!-- Exercice 2 -->
+        <tr>
+            <td>2. Changer la couleur du texte</td>
+            <td>
+                <p id="texte">Ceci est un texte coloré.</p>
+                <button onclick="changerCouleur()">Changer la couleur</button>
+                <button onclick="afficherCode('code2')">Afficher le code</button>
+                <div id="code2" class="code-box" style="display: none;">
+        <pre>
+        function changerCouleur() {
+            const couleurs = ["red", "blue", "green", "purple", "orange"];
+            let texte = document.getElementById('texte');
+            let couleurAleatoire = couleurs[Math.floor(Math.random() * couleurs.length)];
+            texte.style.color = couleurAleatoire;
+        }
+        
+        function afficherCode(id) {
+            let codeBox = document.getElementById(id);
+            codeBox.style.display = (codeBox.style.display === "none") ? "block" : "none";
+        }
+        </pre>
+                </div>
+            </td>
+        </tr>
+        
+
+        <!-- Exercice 3 -->
+        <tr>
+            <td>3. Décrémenter le compteur</td>
+            <td>
+                <p id="compteur2">10</p>
+                <button onclick="decrementer()">Décrémenter</button>
+                <button onclick="afficherCode('code3')">Afficher le code</button>
+                <div id="code3" class="code-box" style="display: none;">
+        <pre>
+        function decrementer() {
+            let compteur = parseInt(document.getElementById('compteur2').textContent);
+            if (compteur > 0) {
+                document.getElementById('compteur2').textContent = compteur - 1;
+            }
+        }
+        
+        function afficherCode(id) {
+            let codeBox = document.getElementById(id);
+            codeBox.style.display = (codeBox.style.display === "none") ? "block" : "none";
+        }
+        </pre>
+                </div>
+            </td>
+        </tr>
+        
+
+        <!-- Exercice 4 -->
+        <tr>
+            <td>4. Afficher le jour de la semaine</td>
+            <td>
+                <button onclick="afficherJour()">Afficher</button>
+                <button onclick="afficherCode('code4')">Afficher le code</button>
+                <div id="code4" class="code-box">
+        <pre>
+        function afficherJour() {
+            const jours = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+            const jourActuel = new Date().getDay();
+            alert(`Nous sommes : ${jours[jourActuel]}`);
+        }
+        </pre>
+                </div>
+            </td>
+        </tr>
+        
+
+        <!-- Exercice 5 -->
+        <tr>
+            <td>5. Calculer l'âge</td>
+            <td>
+                <button onclick="calculerAge()">Calculer</button>
+                <button onclick="afficherCode('code5')">Afficher le code</button>
+                <div id="code5" class="code-box">
+<pre>
+function calculerAge() {
+    const anneeNaissance = prompt("Entrez votre année de naissance :");
+    const anneeActuelle = new Date().getFullYear();
+    alert(`Votre âge est : ${anneeActuelle - anneeNaissance}`);
+}
+</pre>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Exercice 6 -->
+        <tr>
+            <td>6. Trouver la planète la plus chaude !</td>
+            <td>
+                <button onclick="trouverPlanetePlusChaud()">Scanner l'espace</button>
+                <button onclick="afficherCode('code6')">Afficher le code</button>
+                <div id="code6" class="code-box" style="display: none;">
+        <pre>
+        function trouverPlanetePlusChaud() {
+            const planetes = prompt("Entrez les températures des planètes séparées par des virgules :").split(",");
+            const maxTemp = Math.max(...planetes.map(Number));
+            alert(`La planète avec la température la plus élevée est à : ${maxTemp}°C`);
+        }
+        
+        function afficherCode(id) {
+            let codeBox = document.getElementById(id);
+            codeBox.style.display = (codeBox.style.display === "none") ? "block" : "none";
+        }
+        </pre>
+                </div>
+            </td>
+        </tr>
+        
+
+        <!-- Exercice 7 -->
+        <tr>
+            <td>8. Compter les syllabes</td>
+            <td>
+                <button onclick="compterSyllabes()">Compter</button>
+                <button onclick="afficherCode('code7')">Afficher le code</button>
+                <div id="code7" class="code-box">
+                    <pre>
+        function compterSyllabes() {
+            const texte = prompt("Entrez un texte :").toLowerCase();
+            const syllabes = texte.match(/[aeiouy]+/g);  // On compte chaque groupe de voyelles comme une syllabe
+            alert(`Nombre de syllabes : ${syllabes ? syllabes.length : 0}`);
+        }
+                    </pre>
+                </div>
+            </td>
+        </tr>
+        
+
+        <!-- Exercice 8 -->
+        <tr>
+            <td>9. Calculer l'IMC</td>
+            <td>
+                <button onclick="calculerIMC()">Calculer</button>
+                <button onclick="afficherCode('code8')">Afficher le code</button>
+                <div id="code8" class="code-box">
+                    <pre>
+        function calculerIMC() {
+            const poids = parseFloat(prompt("Entrez votre poids en kg :"));
+            const taille = parseFloat(prompt("Entrez votre taille en mètres :"));
+            const imc = (poids / (taille * taille)).toFixed(2);
+            alert(`Votre IMC est : ${imc}`);
+        }
+                    </pre>
+                </div>
+            </td>
+        </tr>
+        
+
+        <!-- Exercice 9 -->
+        <tr>
+            <td>9. Générer un mot de passe aléatoire</td>
+            <td>
+                <button onclick="genererMotDePasse()">Générer</button>
+                <button onclick="afficherCode('code9')">Afficher le code</button>
+                <div id="code9" class="code-box">
+                    <pre>
+        function genererMotDePasse() {
+            const longueur = parseInt(prompt("Entrez la longueur du mot de passe :"));
+            if (isNaN(longueur) || longueur <= 0) {
+                alert("Veuillez entrer un nombre valide pour la longueur.");
+                return;
+            }
+        
+            const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+            let motDePasse = '';
+            for (let i = 0; i < longueur; i++) {
+                const index = Math.floor(Math.random() * caracteres.length);
+                motDePasse += caracteres.charAt(index);
+            }
+            alert(`Votre mot de passe généré est : ${motDePasse}`);
+        }
+                    </pre>
+                </div>
+            </td>
+        </tr>
+             
+
+        <!-- Exercice 10 -->
+        <tr>
+            <td>10. Générer une séquence de Fibonacci</td>
+            <td>
+                <button onclick="genererFibonacci()">Générer</button>
+                <button onclick="afficherCode('code10')">Afficher le code</button>
+                <div id="code10" class="code-box">
+                    <pre>
+        function genererFibonacci() {
+            const n = parseInt(prompt("Entrez le nombre de termes de la séquence de Fibonacci :"));
+            if (isNaN(n) || n <= 0) {
+                alert("Veuillez entrer un nombre valide pour les termes.");
+                return;
+            }
+            
+            let fibonacci = [0, 1];
+            for (let i = 2; i < n; i++) {
+                fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);
+            }
+            
+            alert(`La séquence de Fibonacci avec ${n} termes est : ${fibonacci.join(", ")}`);
+        }
+                    </pre>
+                </div>
+            </td>
+        </tr>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<script>
+
+function afficherCode(id) {
+    let codeBox = document.getElementById(id);
+    codeBox.style.display = (codeBox.style.display === "none") ? "block" : "none";
+}
+
+function genererCitation() {
+    const citations = [
+        "La vie est un mystère qu'il faut vivre, et non un problème à résoudre. - Gandhi",
+        "Le succès, c'est se promener d'échec en échec tout en restant motivé. - Churchill",
+        "Le bonheur dépend de nous seuls. - Aristote",
+        "Je vois mon âme qui chavire en bord de mer. - Ademo",
+        "L'imagination est plus importante que le savoir. - Einstein",
+        "Fais de ta vie un rêve, et d'un rêve, une réalité. - Saint-Exupéry"
+    ];
+    
+    const index = Math.floor(Math.random() * citations.length);
+    document.getElementById("citation").textContent = citations[index];
+}
+
+function changerCouleur() {
+    const couleurs = ["red", "blue", "green", "purple", "orange"];
+    let texte = document.getElementById('texte');
+    let couleurAleatoire = couleurs[Math.floor(Math.random() * couleurs.length)];
+    texte.style.color = couleurAleatoire;
+}
+
+function decrementer() {
+    let compteur = parseInt(document.getElementById('compteur2').textContent);
+    if (compteur > 0) {
+        document.getElementById('compteur2').textContent = compteur - 1;
+    }
+}
+
+function afficherJour() {
+    const jours = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+    const jourActuel = new Date().getDay();
+    alert(`Nous sommes : ${jours[jourActuel]}`);
+}
+
+function calculerAge() {
+    const anneeNaissance = prompt("Entrez votre année de naissance :");
+    const anneeActuelle = new Date().getFullYear();
+    alert(`Votre âge est : ${anneeActuelle - anneeNaissance}`);
+}
+
+function trouverPlanetePlusChaud() {
+    const planetes = prompt("Entrez les températures des planètes séparées par des virgules :").split(",");
+    const maxTemp = Math.max(...planetes.map(Number));
+    alert(`La planète avec la température la plus élevée est à : ${maxTemp}°C`);
+}
+
+function compterSyllabes() {
+    const texte = prompt("Entrez un texte :").toLowerCase();
+    const syllabes = texte.match(/[aeiouy]+/g);
+    alert(`Nombre de syllabes : ${syllabes ? syllabes.length : 0}`);
+}
+
+function calculerIMC() {
+    const poids = parseFloat(prompt("Entrez votre poids en kg :"));
+    const taille = parseFloat(prompt("Entrez votre taille en mètres :"));
+    const imc = (poids / (taille * taille)).toFixed(2);
+    alert(`Votre IMC est : ${imc}`);
+}
+
+function genererMotDePasse() {
+    const longueur = parseInt(prompt("Entrez la longueur du mot de passe :"));
+    if (isNaN(longueur) || longueur <= 0) {
+        alert("Veuillez entrer un nombre valide pour la longueur.");
+        return;
+    }
+
+    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+    let motDePasse = '';
+    for (let i = 0; i < longueur; i++) {
+        const index = Math.floor(Math.random() * caracteres.length);
+        motDePasse += caracteres.charAt(index);
+    }
+    alert(`Votre mot de passe généré est : ${motDePasse}`);
+}
+
+function genererFibonacci() {
+    const n = parseInt(prompt("Entrez le nombre de termes de la séquence de Fibonacci :"));
+    if (isNaN(n) || n <= 0) {
+        alert("Veuillez entrer un nombre valide pour les termes.");
+        return;
+    }
+    
+    let fibonacci = [0, 1];
+    for (let i = 2; i < n; i++) {
+        fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);
+    }
+    
+    alert(`La séquence de Fibonacci avec ${n} termes est : ${fibonacci.join(", ")}`);
+}
+
+</script>
+
+</body>
+</html>
