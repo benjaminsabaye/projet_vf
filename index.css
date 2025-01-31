@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Giraffrey';
-    src: url('./fonts/Giraffey.otf') format('opentype');
+    font-family: 'Azonix';
+    src: url('./fonts/Azonix.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'Adlanta';
-    src: url('./fonts/Adlanta.otf') format('opentype');
+    font-family: 'Arial';
+    src: url('./fonts/arial.ttf') format('truetype');
 }
 
 @font-face {
@@ -19,11 +19,11 @@
 }
 
 body {
-    /*background-image: url('./images/1276368.jpg');
-    background-size: 137%;
-    background-position: fixed;
-    background-repeat: no-repeat;*/
-    background-color: #7e54d2;
+    background-image: url("images/back.jpg"); /* Chemin de l'image */
+    background-size: cover; /* Couvre tout l'écran */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition */
+    background-attachment: fixed; /* Effet de parallaxe (image fixe) */
 }
 
 a{
@@ -37,22 +37,15 @@ a{
 }
 
 .main_title{
-    font-family: 'Giraffey';
-    font-size: 180px;
+    font-family: 'Azonix';
+    font-size: 100px;
     text-transform: uppercase;
-    color: rgb(0, 0, 0);
+    color: #5c34ad;
     letter-spacing: 11px;
 }
 
-.subtitles a{
-    transition: transform 0.4s ease;
-    justify-content: center;
-    align-items: center;
-}
-
-.subtitles a:hover{
-    transform: scale(1.1);
-    display: inline-block;
+.subtitles {
+    display: flex;
 }
 
 .tp1{
@@ -64,18 +57,9 @@ a{
     font-family: 'OstrichSans-Medium';
     font-size: 40px;
     letter-spacing: 2px;
-    transition: transform 0.4s ease;
     cursor: pointer;
     padding: 5px;
     
-}
-
-
-
-.tp1:hover{
-    background-color: rgb(23, 0, 23);
-    transform: scale(1.2);
-    color: white;
 }
 
 .mission1{
@@ -140,6 +124,7 @@ a{
     font-family: 'OstrichSans-Medium';
     font-size: 40px;
     letter-spacing: 2px;
+    padding-left: 15px;
     transition: transform 0.4s ease;
     cursor: pointer;
     padding: 5px;
@@ -151,19 +136,38 @@ a{
 }
 
 .mission3 {
-    color: rgb(0, 0, 0);
-    border-bottom: 2px solid ;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
-    font-family: 'OstrichSans-Medium';
-    font-size: 40px;
+    font-family: 'Arial';
+    font-weight: bold;
+    font-size: 20px;
     letter-spacing: 2px;
-    transition: transform 0.4s ease;
     cursor: pointer;
     padding: 5px;
-    margin-right: 45px;
+    margin: 30px;
+    margin-bottom: 40px;
 }
 
-.mission3:hover {
-    background-color: rgb(23, 0, 23);
+
+.block-back {
+    width: 380px;
+    height: 280px;
+    background-color: #4e3580b7;
+    margin: 8px;
+    justify-content: center;
+    align-content: center;
+    border-radius: 7px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.block-back:hover {
+    background-color: rgba(167, 81, 167, 0.648);
     color: white;
+    cursor: pointer;
+    transform: scale(1.05); /* Effet d'agrandissement léger au survol */
+}
+
+img {
+    border-radius: 5px;
+    border: solid 4px black;
 }
