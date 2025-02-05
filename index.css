@@ -18,23 +18,25 @@
     src: url('./fonts/OstrichSansInline-Regular.otf') format('opentype');
 }
 
+:root {
+    --main-color: #5c34ad;
+    --secondary-color: #ffcc00;
+}
+
+
 body {
-    background-image: url("images/back.jpg"); /* Chemin de l'image */
+    background-color: black; /* Chemin de l'image */
     background-size: cover; /* Couvre tout l'écran */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition */
     background-attachment: fixed; /* Effet de parallaxe (image fixe) */
 }
 
-a{
-    text-decoration: none;
-}
-
-
 .all_elements{
     margin-top: 5%;
     max-width: 1400px;
 }
+
 
 .main_title{
     font-family: 'Azonix';
@@ -46,6 +48,7 @@ a{
 
 .subtitles {
     display: flex;
+    justify-content: center;
 }
 
 .tp1{
@@ -150,24 +153,72 @@ a{
 
 
 .block-back {
+    min-width: 250px;
+    box-shadow: 0px 0px 10px var(--main-color);
     width: 380px;
     height: 280px;
-    background-color: #4e3580b7;
-    margin: 8px;
+    background-color: #080808a2;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    border: solid rgba(14, 13, 13, 0.959) 2px;
     justify-content: center;
     align-content: center;
     border-radius: 7px;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.block-back:hover {
-    background-color: rgba(167, 81, 167, 0.648);
+.button_access:hover {
     color: white;
     cursor: pointer;
-    transform: scale(1.05); /* Effet d'agrandissement léger au survol */
+    transform: scale(1.09);
 }
 
 img {
-    border-radius: 5px;
-    border: solid 4px black;
+    border-radius: 190px;
+    width: 100px;
+    height: 100px;
+    margin-left: 2.5%;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+img:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.button_access {
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-color);
+    font-family: 'OstrichSans-Medium';
+    border-radius: 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 20%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    width: 80%;
+    font-size: 17px;
+    font-family: 'Arial';
+   font-weight: bold;
+    color: rgb(94, 94, 94);
+   
+    text-align: justify;
+}
+
+h2 {
+    font-family: 'Arial';
+    font-size: 25px;
+    color: white;
+   
+    width: 100%;
 }

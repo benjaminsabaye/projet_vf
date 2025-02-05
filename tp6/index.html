@@ -3,47 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facture en Javascript</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="identification.js"></script>
+    <link rel="stylesheet" href="identification.css">
+    <title>Page d'Identification</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Facture en Javascript</h1>
-        <table>
-            <tr>
-                <th>Article</th>
-                <th>Prix</th>
-                <th>Quantité</th>
-                <th>Résultat</th>
-            </tr>
-            <tr>
-                <td><input type="text" id="article1" placeholder="Nom de l'article"></td>
-                <td><input type="number" id="prix1" placeholder="Entrer la valeur"></td>
-                <td><input type="number" id="quantite1" placeholder="Entrer la quantité"></td>
-                <td><input type="text" id="resultat1" readonly></td>
-            </tr>
-            <tr>
-                <td><input type="text" id="article2" placeholder="Nom de l'article"></td>
-                <td><input type="number" id="prix2" placeholder="Entrer la valeur"></td>
-                <td><input type="number" id="quantite2" placeholder="Entrer la quantité"></td>
-                <td><input type="text" id="resultat2" readonly></td>
-            </tr>
-            <tr>
-                <td><input type="text" id="article3" placeholder="Nom de l'article"></td>
-                <td><input type="number" id="prix3" placeholder="Entrer la valeur"></td>
-                <td><input type="number" id="quantite3" placeholder="Entrer la quantité"></td>
-                <td><input type="text" id="resultat3" readonly></td>
-            </tr>
-        </table>
-        <div class="buttons">
-            <button onclick="calculerTotal()">Résultat</button>
-            <button onclick="reinitialiser()">Réinitialiser</button>
+    <div class="identification">
+        <h1>Identification</h1>
+        <div class="boite">
+            <label for="t1">Nom d'utilisateur</label>
+            <input type="text" name="t1" id="t1" placeholder="Entrez votre nom">
         </div>
-        <div class="total">
-            <span>Total: </span><input type="text" id="total" readonly>
+        <div class="boite">
+            <label for="h1">Mot de passe</label>
+            <input type="password" name="h1" id="h1" placeholder="Entrez votre mot de passe">
         </div>
+        <div>
+            <button onclick="login()">Se connecter</button>
+            <button onclick="retour()">Annuler</button>
+        </div>
+        <br>
+        <a href="../index.html">Retour</a>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
