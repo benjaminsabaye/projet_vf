@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
+    <link rel="stylesheet" href="facture.css">
+</head>
+<body>
+<center>
+<div class="all_elements">
+    <div class="facture-header">
+        <div class="company-info">
+            <h1>Mockstar Games</h1>
+            <p>FRA. Paris. 69 avenue des Champs Révisés</p>
+            <p>Benjamin Sabaye</p>
+            <p>+33 06 81 15 78 81</p>
+            <p>copyright-mockstargames@help.fr</p>
+            <h2>FACTURE DE PAIEMENT <span id="number_fac">#142503</span></h2>
+            <p>02/02/2025</p>
+        </div>
+        <img src="../icons/rockstar.png" alt="">
+    </div>
+
+    <hr>
+
+    <div class="destinataire">
+        <div class="colonne">
+            <h3>DESTINATAIRE</h3>
+            <label for="destinataire_nom">Nom de l'entreprise :</label>
+            <input type="text" id="destinataire_nom" placeholder="Naughty Cat LLC....">
+            <br>
+            <label for="destinataire_personne">Nom du destinataire :</label>
+            <input type="text" id="destinataire_personne" placeholder="Neil Bruckman...">
+            <br>
+            <label for="destinataire_adresse">Adresse :</label>
+            <input type="text" id="destinataire_adresse" placeholder="USA. Santa Monica. 2425 Olympic Blvd Ste 3000W...">
+            <br>
+            <label for="destinataire_tel">Téléphone :</label>
+            <input type="text" id="destinataire_tel" placeholder="+1 (310) 633-9100">
+            <br>
+            <label for="destinataire_email">Email :</label>
+            <input type="email" id="destinataire_email" placeholder="contact@naughtycatmag.com">
+        </div>
+    </div>
+
+    <hr>
+
+    <table id="facture">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Quantité</th>
+                <th>Prix Unitaire (€)</th>
+                <th>Total (€)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="ligne-facture">
+                <td><input type="text" class="desc"></td>
+                <td><input type="number" class="qte" min="1" value="1" oninput="calculate()"></td>
+                <td><input type="number" class="prix" min="1" value="1" oninput="calculate()"></td>
+                <td class="total-ligne">0.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button onclick="ajouterLigne()">Ajouter une ligne</button>
+    <button onclick="remplir()">Remplir automatiquement</button>
+    <button onclick="imprimerFacture()">🖨️ Imprimer la facture</button>
+
+    <div class="total-container">
+        <p>Sous-total: <span id="sousTotal">0.00</span> €</p>
+        <p>Remise (%): <input type="number" id="remise" min="0" value="0" oninput="calculate()"></p>
+        <p>Taxe (%): <input type="number" id="taxe" min="0" value="20" oninput="calculate()"></p>
+        <p>Frais d'expédition (€): <input type="number" id="frais" min="0" value="5" oninput="calculate()"></p>
+        <h2 class="unique_price">Total : <span id="total">0.00</span> €</h2>
+    </div>
+</div>
+
+<a href="../index.html"><button>Retour</button></a>
+    <script src="facture.js"></script>
+
+</center>
+</body>
+</html>

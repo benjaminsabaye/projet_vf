@@ -1,0 +1,111 @@
+:root {
+    --main-color: #5c34ad;
+    --secondary-color: #ffcc00;
+}
+
+@font-face {
+    font-family: 'Azonix';
+    src: url('../fonts/Azonix.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/arial.ttf') format('truetype');
+}
+
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+h1 {
+    color: var(--main-color);
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: 'Azonix', sans-serif;
+}
+
+.question {
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+label {
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-bottom: 7px;
+}
+
+label:hover {
+    background: #444;
+    transform: scale(1.05);
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ffcc00;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+
+input[type="radio"]:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: rgb(157, 0, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    background-color: var(--main-color);
+    border: none;
+    letter-spacing: 1px;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
